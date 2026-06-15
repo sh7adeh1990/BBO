@@ -32,3 +32,28 @@ function area = circle_intersection_area(r1, r2, d)
     
     area = (area1 + area2);
 end
+
+% Another implementation is as follows 
+
+%function area = circle_intersection_area(r, R, d)
+
+
+% No overlap
+%if d >= r + R
+   % A = 0;
+
+% One circle completely inside the other
+%elseif d <= abs(R - r)
+   % A = pi * min(r, R)^2;
+
+% Partial overlap
+%else
+ %   A = r^2 * acos((d^2 + r^2 - R^2) / (2*d*r)) + ...
+     %   R^2 * acos((d^2 + R^2 - r^2) / (2*d*R)) - ...
+      %  0.5 * sqrt((-d + r + R) * ...
+                 %  ( d + r - R) * ...
+                 %  ( d - r + R) * ...
+                 %  ( d + r + R));
+%end
+
+%end
