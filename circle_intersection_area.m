@@ -40,15 +40,15 @@ end
 
 % No overlap
 %if d >= r + R
-   % A = 0;
+   % area= 0;
 
 % One circle completely inside the other
 %elseif d <= abs(R - r)
-   % A = pi * min(r, R)^2;
+   % area = pi * min(r, R)^2;
 
 % Partial overlap
 %else
- %   A = r^2 * acos((d^2 + r^2 - R^2) / (2*d*r)) + ...
+ %   area = r^2 * acos((d^2 + r^2 - R^2) / (2*d*r)) + ...
      %   R^2 * acos((d^2 + R^2 - r^2) / (2*d*R)) - ...
       %  0.5 * sqrt((-d + r + R) * ...
                  %  ( d + r - R) * ...
